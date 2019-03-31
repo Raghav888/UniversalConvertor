@@ -2,7 +2,7 @@
 #include<cstring>
 #include<math.h>
  using namespace std;
-  long double num; 
+  long double num;
   char unit[10];
 
    class Length
@@ -10,22 +10,23 @@
  	public:
   	long double km,m,cm,mm,ft,in;
     	void fun();
+      void fun1();
     };
 
   void Length::fun()
     {
   	int a,b;
   	Again:
-  	cout<<"\nEnter the unit in which quantity the quantity will be entered:-\n";				
+  	cout<<"\nEnter the unit in which quantity the quantity will be entered:-\n";
   	cout<<"\n1.Kilometer\n2.Meter\n3.Centimeter\n4.Millimeter\n5.Feet\n6.Inch\n";
-  	cin>>a;       
+  	cin>>a;
 
-  	cout<<"\nEnter the unit in which conversion is to be done:-\n";		
+  	cout<<"\nEnter the unit in which conversion is to be done:-\n";
   	cout<<"\n1.Kilometer\n2.Meter\n3.Centimeter\n4.Millimeter\n5.Feet\n6.Inch\n";
   	cin>>b;
 
-  	cout<<"\nEnter the quantity:-\n";					
-  	cin>>num;  
+  	cout<<"\nEnter the quantity:-\n";
+  	cin>>num;
 
    	switch (a){
     	 case 1:
@@ -34,16 +35,16 @@
     	 case 2:
    	 m=num;strcpy(unit,"m");
    	 break;
-    	 case 3:	
+    	 case 3:
    	 m=num/100;strcpy(unit,"cm");
    	 break;
-   	 case 4:	
+   	 case 4:
    	 m=num/1000;strcpy(unit,"mm");
          break;
-         case 5:	
+         case 5:
    	 m=num/3.28084;strcpy(unit,"ft");
    	 break;
-         case 6:	
+         case 6:
    	 m=num/39.3701;strcpy(unit,"in");
    	 break;
          default :
@@ -57,8 +58,8 @@
 	mm=m*1000;
    	ft=m*3.28084;
    	in=m*39.3701;
-   
-   
+
+
 system("clear");
 	switch (b){
    	 case 1:
@@ -69,7 +70,7 @@ system("clear");
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<m<<" m \n\n";
    	 break;
-         case 3:	
+         case 3:
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<cm<<" cm\n\n";
    	 break;
@@ -77,11 +78,11 @@ system("clear");
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<mm<<" mm\n\n";
    	 break;
-         case 5:	
+         case 5:
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<ft<<" ft\n\n";
    	 break;
-         case 6:	
+         case 6:
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<in<<" in\n\n";
    	 break;
@@ -105,15 +106,15 @@ system("clear");
   	Again:
   	cout<<"\nEnter the unit in which quantity the quantity will be entered:-\n";
   	cout<<"\n1.Hectare\n2.Acre\n3.Meter.sq\n4.Centimeter.sq\n5.Kilometer.sq\n";
-  	cin>>a;       
-  
+  	cin>>a;
+
   	cout<<"\nEnter the unit in which conversion is to be done:-\n";
   	cout<<"\n1.Hectare\n2.Acre\n3.Meter.sq\n4.Centimeter.sq\n5.Kilometer.sq\n";
   	cin>>b;
 
   	cout<<"\nEnter the quantity:-\n";
  	cin>>num;
- 
+
 	switch (a){
     	 case 1:
        	  m=num*10000; strcpy(unit,"ha");
@@ -121,13 +122,13 @@ system("clear");
          case 2:
    	  m=num*4046.86;strcpy(unit,"ac");
    	  break;
-   	 case 3:	
+   	 case 3:
    	  m=num;strcpy(unit,"m.sq");
    	  break;
-   	 case 4:	
+   	 case 4:
    	  m=num/10000;strcpy(unit,"cm.sq");
    	  break;
-   	 case 5:	
+   	 case 5:
    	  m=num*1000000;strcpy(unit,"sq.km");
    	  break;
     	 default :
@@ -135,13 +136,13 @@ system("clear");
       	  goto Again;
           break;
  	           }
-   
+
    	h=m/10000;
    	ac=m/4046.86;
    	cm=m*10000;
    	km=m*1000000;
-   
-   
+
+
 system("clear");
 	switch (b){
     	 case 1:
@@ -152,7 +153,7 @@ system("clear");
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<ac<<" ac\n\n";
    	 break;
-        case 3:	
+        case 3:
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<m<<" m.sq\n\n";
    	 break;
@@ -160,7 +161,7 @@ system("clear");
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<cm<<" cm.sq\n\n";
    	 break;
-    	case 5:	
+    	case 5:
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<km<<" sq.km\n\n";
    	 break;
@@ -168,7 +169,7 @@ system("clear");
          cout<<"Invalid Input\n";
          goto Again;
          break;
-  	   	
+
    		  }
 	}
 
@@ -184,15 +185,15 @@ system("clear");
   	Again:
   	cout<<"\nEnter the unit in which quantity the quantity will be entered:-\n";
   	cout<<"\n1.Liter\n2.Milli Liter\n3.Cube Meter\n4.Cubic Centimeter\n5.Barrel\n";
-  	cin>>a;       
-  
+  	cin>>a;
+
   	cout<<"\nEnter the unit in which conversion is to be done:-\n";
   	cout<<"\n1.Liter\n2.Milliliter\n3.Cube Meter\n4.Cubic Centimeter\n5.Barrel\n";
   	cin>>b;
 
   	cout<<"\nEnter the quantity:-\n";
   	cin>>num;
- 
+
 
    	switch (a){
          case 1:
@@ -201,13 +202,13 @@ system("clear");
     	 case 2:
    	 m=num/1000000;strcpy(unit,"ml");
    	 break;
-    	 case 3:	
+    	 case 3:
    	 m=num;strcpy(unit,"cu.m");
    	 break;
-         case 4:	
+         case 4:
    	 m=num/1000000;strcpy(unit,"cu.cm");
    	 break;
-   	 case 5:	
+   	 case 5:
    	 m=num/6.289811;strcpy(unit,"bbl");
    	 break;
          default :
@@ -218,8 +219,8 @@ system("clear");
    	l=m*1000;
    	ml=m*1000000;
    	cm=m*1000000;
-   	ba=m*6.289811;   
-   
+   	ba=m*6.289811;
+
   	switch (b){
     	 case 1:
          cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
@@ -229,7 +230,7 @@ system("clear");
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<ml<<" ml\n\n";
    	 break;
-    	 case 3:	
+    	 case 3:
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<m<<" cu.m\n\n";
    	 break;
@@ -237,7 +238,7 @@ system("clear");
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<cm<<" cu.cm\n\n";
    	 break;
-    	 case 5:	
+    	 case 5:
    	 cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
          cout<<num<<" "<<unit<<" = "<<ba<<" bbl\n\n";
    	 break;
@@ -245,7 +246,7 @@ system("clear");
          cout<<"Invalid Input\n";
          goto Again;
          break;
-  	   	
+
              }
    }
 
@@ -261,15 +262,15 @@ system("clear");
   	Again:
   	cout<<"\nEnter the unit in which quantity the quantity will be entered:-\n";
   	cout<<"\n1.Week\n2.Day\n3.Hour\n4.Minute\n5.Seconds\n";
-  	cin>>a;       
-  
+  	cin>>a;
+
   	cout<<"\nEnter the unit in which conversion is to be done:-\n";
    	cout<<"\n1.Week\n2.Day\n3.Hour\n4.Minute\n5.Seconds\n";
   	cin>>b;
 
   	cout<<"\nEnter the quantity:-\n";
   	cin>>num;
- 
+
 
    	switch (a){
          case 1:
@@ -278,25 +279,25 @@ system("clear");
     	 case 2:
    	 hr=num*24;strcpy(unit,"Day");
    	 break;
-    	 case 3:	
+    	 case 3:
    	 hr=num;strcpy(unit,"hr");
    	 break;
-   	 case 4:	
+   	 case 4:
    	 hr=num/60;strcpy(unit,"min");
    	 break;
-   	 case 5:	
+   	 case 5:
  	 hr=num/3600;strcpy(unit,"s");
    	 break;
          default :
          cout<<"Invalid Input\n";
          goto Again;
          break;
- 	          } 
+ 	          }
    	w=hr/168;
    	d=hr/24;
    	m=hr*60;
    	s=hr*3600;
-  	
+
 	switch (b){
     	 case 1:
          cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
@@ -307,7 +308,7 @@ system("clear");
    	 cout<<num<<" "<<unit<<" = "<<d<<" Day\n\n";
    	 break;
     	 case 3:
-         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";	
+         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
    	 cout<<num<<" "<<unit<<" = "<<hr<<" hr\n\n";
     	 break;
    	 case 4:
@@ -315,14 +316,14 @@ system("clear");
    	 cout<<num<<" "<<unit<<" = "<<m<<" min\n\n";
    	 break;
     	 case 5:
-         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";	
+         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
    	 cout<<num<<" "<<unit<<" = "<<s<<" s\n\n";
    	 break;
          default:
          cout<<"Invalid Input\n";
          goto Again;
          break;
-  	   	
+
         }
    }
 
@@ -333,7 +334,7 @@ system("clear");
 	 public:
   		long double c, k , f;
     		void fun();
- 
+
     };
 
     void Temp::fun(){
@@ -341,15 +342,15 @@ system("clear");
   	Again:
   	cout<<"\nEnter the unit in which quantity the quantity will be entered:-\n";
   	cout<<"\n1.Celsius\n2.Kelvin\n3.Fahrenheit\n";
-  	cin>>a;       
+  	cin>>a;
 
   	cout<<"\nEnter the unit in which conversion is to be done:-\n";
 		cout<<"\n1.Celsius\n2.Kelvin\n3.Fahrenheit\n";
   	cin>>b;
 
   	cout<<"\nEnter the quantity:-\n";
-  	cin>>num;  
- 
+  	cin>>num;
+
 
   	switch (a){
     	 case 1:
@@ -358,7 +359,7 @@ system("clear");
     	 case 2:
    	 c=num-273;strcpy(unit,"K");
    	 break;
-     	 case 3:	
+     	 case 3:
    	 c=(num-32)*5/9;strcpy(unit,"F");
   	 break;
   	 default :
@@ -366,11 +367,11 @@ system("clear");
          goto Again;
          break;
  	            }
-   
-   	k=273+c; 
+
+   	k=273+c;
    	f=(9/5)*c +32;
-   
-   
+
+
  system("clear");
 	switch (b){
     	 case 1:
@@ -382,14 +383,14 @@ system("clear");
    	 cout<<num<<" "<<unit<<" = "<<k<<"K\n\n";
    	 break;
     	 case 3:
-         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";	
+         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
    	 cout<<num<<" "<<unit<<" = "<<f<<"F\n\n";
    	 break;
     	 default:
          cout<<"Invalid Input\n";
          goto Again;
          break;
-  	   	
+
    	}
  }
 
@@ -406,8 +407,8 @@ system("clear");
   	Again:
   	cout<<"\nEnter the unit in which quantity the quantity will be entered:-\n";
 	cout<<"\n1.m/s\n2.km/hr\n3.mi/hr\n";
- 	cin>>a;       
-  
+ 	cin>>a;
+
   	cout<<"\nEnter the unit in which conversion is to be done:-\n";
   	cout<<"\n1.m/s\n2.km/hr\n3.mi/hr\n";
   	cin>>b;
@@ -422,7 +423,7 @@ system("clear");
     	 case 2:
     	 ms = num / 3.6;strcpy(unit,"km/hr");
    	 break;
-    	 case 3:	
+    	 case 3:
    	 ms = num / 2.236936292;strcpy(unit,"mi/hr");
    	 break;
     	 default :
@@ -430,10 +431,10 @@ system("clear");
        	 goto Again;
          break;
  	          }
-   
+
   	kmh=ms/0.2777;
    	mph=ms/0.44704;
-   
+
 system("clear");
 	switch (b){
     	 case 1:
@@ -445,24 +446,24 @@ system("clear");
    	 cout<<num<<" "<<unit<<" = "<<kmh<<" km/hr\n\n";
    	 break;
     	 case 3:
-         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";	
+         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
    	 cout<<num<<" "<<unit<<" = "<<mph<<" mi/hr\n\n";
    	 break;
     	 default:
          cout<<"Invalid Input";
          goto Again;
          break;
-  	   	
+
    		}
-     
-	}	 
+
+	}
 
     class Mass
      {
  	public:
   		long double g,kg,ton,q,car;
   		void fun();
-  
+
      };
 
      void Mass::fun(){
@@ -470,15 +471,15 @@ system("clear");
   	Again:
   	cout<<"\nEnter the unit in which quantity the quantity will be entered:-\n";
   	cout<<"\n1.Gram\n2.Kilogram\n3.Ton\n4.Quintal\n5.Carat\n";
-  	cin>>a;       
-  
+  	cin>>a;
+
   	cout<<"\nEnter the unit in which conversion is to be done:-\n";
   	cout<<"\n1.Gram\n2.Kilogram\n3.Ton\n4.Quintal\n5.Carat\n";
   	cin>>b;
 
   	cout<<"\nEnter the quantity:-\n";
   	cin>>num;
-      
+
    	switch (a){
     	 case 1:
          g= num;strcpy(unit,"g");
@@ -486,27 +487,27 @@ system("clear");
     	 case 2:
    	 g = num * 1000;strcpy(unit,"kg");
    	 break;
-    	 case 3:	
+    	 case 3:
    	 g = num * 1000000;strcpy(unit,"ton");
    	 break;
-    	 case 4:	
+    	 case 4:
    	 g = num * 100000;strcpy(unit,"quintal");
    	 break;
-    	 case 5:	
+    	 case 5:
    	 g = num / 5;strcpy(unit,"ct");
-   	 break;	  
+   	 break;
     	 default :
          cout<<"Invalid Input\n";
          goto Again;
          break;
  	          }
-   
+
    	kg = g / 1000;
    	q =  g / 100000;
    	ton= g / 1000000;
    	car= g * 5;
-   
-   
+
+
 system("clear");
 	switch (b){
     	 case 1:
@@ -518,26 +519,26 @@ system("clear");
    	 cout<<num<<" "<<unit<<" = "<<kg<<" kg\n\n";
    	 break;
     	 case 3:
-         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";	
+         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
    	 cout<<num<<" "<<unit<<" = "<<ton<<" ton\n\n";
    	 break;
     	 case 4:
-         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";	
+         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
    	 cout<<num<<" "<<unit<<" = "<<q<<" quintal\n\n";
    	 break;
     	 case 5:
          cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
    	 cout<<num<<" "<<unit<<" = "<<car<<" ct\n\n";
-   	 break;	  
+   	 break;
      	 default:
          cout<<"Invalid Input\n";
          goto Again;
          break;
-  	   	
+
      }
-     
- } 
-   
+
+ }
+
    class Mem
      {
  	public:
@@ -551,8 +552,8 @@ system("clear");
   	Again:
   	cout<<"\nEnter the unit in which quantity the quantity will be entered:-\n";
   	cout<<"\n1.Byte\n2.KB\n3.MB\n4.GB\n5.TB\n";
-  	cin>>a;       
-  
+  	cin>>a;
+
   	cout<<"\nEnter the unit in which conversion is to be done:-\n";
  	cout<<"\n1.Byte\n2.KB\n3.MB\n4.GB\n5.TB\n";
 	cin>>c;
@@ -567,27 +568,27 @@ system("clear");
     	 case 2:
    	 mb=num/1024;strcpy(unit,"KB");
    	 break;
-    	 case 3:	
+    	 case 3:
    	 mb = num;strcpy(unit,"MB");
    	 break;
-    	 case 4:	
+    	 case 4:
    	 mb = num *1024;strcpy(unit,"GB");
    	 break;
-    	 case 5:	
+    	 case 5:
    	 mb = num *1024*1024;strcpy(unit,"TB");
-   	 break;	  
+   	 break;
     	 default :
          cout<<"Invalid Input\n";
          goto Again;
          break;
  	           }
-   
+
    	b=mb*1024*1024;
    	kb=mb*1024;
    	gb=mb/1024;
    	tb=mb/1048576;
-   
-   
+
+
 system("clear");
 	switch(c){
     	 case 1:
@@ -599,26 +600,26 @@ system("clear");
    	 cout<<num<<" "<<unit<<" = "<<kb<<" KB\n\n";
    	 break;
     	 case 3:
-         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";	
+         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
    	 cout<<num<<" "<<unit<<" = "<<mb<<" MB\n\n";
    	 break;
     	 case 4:
-         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";	
+         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
    	 cout<<num<<" "<<unit<<" = "<<gb<<" GB\n\n";
    	 break;
     	 case 5:
-         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";	
+         cout<<"\n\n\t\t\t\tAnswer:\n\t\t\t\t";
    	 cout<<num<<" "<<unit<<" = "<<tb<<" TB\n\n";
-   	 break;	  
+   	 break;
      	 default:
          cout<<"Invalid Input\n";
          goto Again;
          break;
-  	   	
+
       }
-     
-  } 
-  
+
+  }
+
   class Num{
  public:
  long long decimal(long long binum)
@@ -674,7 +675,7 @@ system("clear");
    for(i=n-1;i>=0;i--)
    {
     if(hex[i]=='A'||hex[i]=='B'||hex[i]=='C'||hex[i]=='D'||hex[i]=='E'||hex[i]=='F')
-    { 
+    {
      temp_hex=hex[i] - 55;
     }
     else
@@ -766,12 +767,12 @@ system("clear");
   case 4:goto hexal_num;
 	break;
   case 5:exit(0);
- 	break;	
+ 	break;
   default:cout<<"Invalid Input!!!\n";
 	exit(0);
 	break;
   }
-  
+
   binary_num:
   cout<<"Enter number in binary:\n";
   cin>>binum;
@@ -797,11 +798,11 @@ system("clear");
   binum=hex_binary();
   decnum=decimal(binum);
   octnum=octal(binum);
-  goto continue_; 
+  goto continue_;
 
   continue_:
   cout<<"Binary value is "<<binum<<endl;
-  cout<<"Decimal value is "<<decnum<<endl;      
+  cout<<"Decimal value is "<<decnum<<endl;
   cout<<"Octal value is "<<octnum<<endl;
   if(ch!=4)
   {
@@ -814,7 +815,7 @@ system("clear");
    int main()
 	{
 	int c;
- 	Start: 
+ 	Start:
   system("clear");
  	cout<<"\t\t____________THE CONVERTOR___________\n";
 	cout<<"\n----------------------------------------------------------------------------------------";
@@ -822,19 +823,19 @@ system("clear");
 	cout<<"\n-----------------------------------------------------------------------------------------";
  	cout<<"\nPlease Enter Choice for convertor\n";
  	cin>>c;
- 
+
  	switch (c){
     	 case 1 :
     	 system("clear");
       	 Length obj1;
        	 obj1.fun();
-      	 //goto Start; 
+      	 //goto Start;
     	 break;
     	 case 2 :
     	 system("clear");
       	 Area obj2;
       	 obj2.fun();
-      	 //goto Start; 
+      	 //goto Start;
     	 break;
     	 case 3 :
     	 system("clear");
@@ -852,13 +853,13 @@ system("clear");
     	 system("clear");
       	 Temp obj5;
       	 obj5.fun();
-         //goto Start; 
+         //goto Start;
     	 break;
     	 case 6 :
     	 system("clear");
       	 Speed obj6;
       	 obj6.fun();
-      	//goto Start; 		
+      	//goto Start;
     	 break;
     	 case 7 :
     	 system("clear");
@@ -871,15 +872,15 @@ system("clear");
       	 Mem obj8;
       	 obj8.fun();
       	 //goto Start;
-    	 break;		
+    	 break;
     	  case 9 :
     	  system("clear");
          Num obj9;
          obj9.fun();
-        // goto Start;			
+        // goto Start;
     	 case 0 :
     	 exit(0);
    }
- 
+
    return 0;
 }
