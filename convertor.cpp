@@ -10,7 +10,7 @@
  	public:
   	long double km,m,cm,mm,ft,in;
     	void fun();
-      void fun1();
+      
     };
 
   void Length::fun()
